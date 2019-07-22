@@ -53,13 +53,7 @@ class Stopwatch {
     }
 
     resetWatch() {
-        this.running = false;
-        this.times = {
-            minutes: 0,
-            seconds: 0,
-            miliseconds: 0
-        };
-        clearInterval(this.watch);
+        this.reset();
         this.print();
     }
 

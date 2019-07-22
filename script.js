@@ -25,7 +25,7 @@ class Stopwatch {
     start() {
         if (!this.running) {
             this.running = true;
-            this.watch = setInterval( () => this.step(), 10);
+            this.watch = setInterval(() => this.step(), 10);
         }
     }
 
@@ -53,17 +53,11 @@ class Stopwatch {
     }
 
     resetWatch() {
-        this.running = false;
-        this.times = {
-            minutes: 0,
-            seconds: 0,
-            miliseconds: 0
-        };
-        clearInterval(this.watch);
+        this.reset();
         this.print();
     }
 
-   
+
 }
 
 function pad0(value) {
